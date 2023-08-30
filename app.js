@@ -5,7 +5,6 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
-const nunjucks = require("nunjucks");
 
 const session = require("express-session"); // express-session 미들웨어를 가져와 사용자 세션을 관리합니다.
 const MongoStore = require("connect-mongo"); // MongoDB에 세션 데이터를 저장하기 위해 connect-mongo를 가져옵니다.
@@ -18,14 +17,6 @@ const bannedWordRouter = require("./routes/bannedWordRouter.js");
 const diaryRouter = require("./routes/diaryRouter.js");
 
 var app = express();
-
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "njk");
-nunjucks.configure("views", {
-	express: app,
-	watch: true,
-});
 
 app.use(logger("dev"));
 app.use(express.json());
