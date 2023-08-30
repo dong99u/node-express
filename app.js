@@ -25,10 +25,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // 요청 본문에서 들어오는 URL 인코딩 데이터를 구문 분석합니다.
 app.use("/img/uploads", express.static(`${__dirname}/uploads`)); // uploads 폴더를 정적 경로로 추가
 app.use(cookieParser());
+const nunjucks = require("nunjucks");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "pug");
+app.set("view engine", "njk");
+nunjucks.configure("views", {
+	express: app,
+	watch: true,
+});
 
 // 세션 미들웨어 설정: express-session 미들웨어를 사용하려면 먼저 앱에 세션 미들웨어를 추가해야 합니다.
 app.use(
