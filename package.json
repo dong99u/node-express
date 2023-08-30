@@ -1,18 +1,40 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
-  "dependencies": {
-    "chokidar": "^3.5.3",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "morgan": "~1.9.1",
-    "nunjucks": "^3.2.3",
-    "pug": "^3.0.2"
-  }
+	"name": "myapp",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "nodemon ./bin/www"
+	},
+	"dependencies": {
+		"chokidar": "^3.5.3",
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"http-errors": "~1.6.3",
+		"nunjucks": "^3.2.3",
+		"pug": "^3.0.2",
+		"bcrypt": "^5.1.0",
+		"connect-mongo": "^5.0.0",
+		"crypto": "^1.0.1",
+		"dotenv": "^16.3.1",
+		"express": "^4.18.2",
+		"express-session": "^1.17.3",
+		"express-validator": "^7.0.1",
+		"fs": "^0.0.1-security",
+		"jsonwebtoken": "^9.0.1",
+		"moment": "^2.29.4",
+		"moment-timezone": "^0.5.43",
+		"mongodb": "^5.7.0",
+		"mongoose": "^7.3.4",
+		"morgan": "^1.10.0",
+		"multer": "^1.4.5-lts.1",
+		"nodemailer": "^6.9.4",
+		"path": "^0.12.7",
+		"socket.io": "^4.7.2",
+		"uuid": "^9.0.0",
+		"uuid4": "^2.0.3",
+		"winston": "^3.10.0"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.1"
+	}
 }
